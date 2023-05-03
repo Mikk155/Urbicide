@@ -1,0 +1,70 @@
+"syn.antlion_warehouse"
+{
+	"playrandom"
+	{
+		"time"		"7,30"
+		"volume"	"1.0"
+		"pitch"		"95,105"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
+
+		"rndwave"
+		{
+			"wave"		"ambient/levels/caves/rumble1.wav"
+			"wave"		"ambient/levels/caves/rumble2.wav"
+			"wave"		"ambient/levels/caves/rumble3.wav"
+			"wave"		"ambient/atmosphere/terrain_rumble1.wav"
+
+			"wave"		"ambient/materials/rock3.wav"
+			"wave"		"ambient/materials/rock5.wav"
+		}
+		
+	}
+}
+"syn.warehouse_caves_nest"
+{
+	"playlooping"
+	{
+		"volume"	"0.2"
+		"pitch"		"100"
+		"wave"		"ambient/levels/caves/cave_howl_loop1.wav"
+	}
+
+	"playrandom"
+	{
+		"time"		"3, 9"
+		"volume"	"1.0"
+		"pitch"		"90, 100"
+		"position"	"0, 1, 2"
+		"soundlevel" "SNDLVL_140db"
+
+		"rndwave"
+		{
+			"wave"		"ambient/levels/caves/dist_grub1.wav"
+			"wave"		"ambient/levels/caves/dist_grub2.wav"
+			"wave"		"ambient/levels/caves/dist_grub3.wav"
+			"wave"		"ambient/levels/caves/dist_grub4.wav"
+			"wave"		"ambient/levels/caves/dist_grub5.wav"
+		}
+	}
+}
+"syn.forest_cliff"
+{
+	"playsoundscape"
+	{
+		"name"		"ep2_forest.util_windgusts"
+		"volume"	"1.0"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"ep2_forest.util_birds"
+		"volume"	"0.5"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"coast.util_windgusts"
+		"volume"	"1.0"
+	}
+}

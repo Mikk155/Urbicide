@@ -1,0 +1,1 @@
+func_keypad, trigger_keypad, item_keypad

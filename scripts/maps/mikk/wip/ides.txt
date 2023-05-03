@@ -1,0 +1,7 @@
+point ents de recharges healthchargers con el modelo del plugin de gamebanana
+
+func_monsterclip point entity
+
+mommentary_trigger
+
+player_observer "filter player targetname"

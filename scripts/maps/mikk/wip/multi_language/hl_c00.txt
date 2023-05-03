@@ -1,0 +1,163 @@
+// Tittles translated for hl_c00
+// The keys supported are the next ones:
+// message -> english
+// message_spanish -> spanish
+// message_spanish2 -> spanish (Spain)
+// message_portuguese -> portuguese
+// message_german -> german
+// message_french -> french
+// message_italian -> italian
+// message_esperanto -> esperanto
+// message_czech -> czech
+// message_dutch -> dutch
+// message_indonesian -> indonesian
+// message_romanian -> romanian
+// message_turkish -> turkish
+// message_albanian -> albanian
+
+// Put yourself as a credit translator in here
+{
+"effect" "5"
+"targetname" "mlang_credits"
+"message_spanish" "Traducido por Mikk"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "-1"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "Black Mesa Research Facility\nBlack Mesa, New Mexico"
+"targetname" "fade_in_cr27"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "-1"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "DISASTER RESPONSE PRIORITY:\nDiscretionary"
+"targetname" "cr37"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "-1"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "ADMINISTRATIVE SPONSOR:\nClassified"
+"targetname" "cr36"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "-1"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "CLEARANCE:\nLevel 3"
+"targetname" "cr35"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "-1"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "ASSIGNMENT:\nAnomalous Materials Laboratory"
+"targetname" "cr34"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "-1"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "EDUCATION:\nPh.D., MIT, Theoretical Physics"
+"targetname" "cr32"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "-1"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "POSITION:\nResearch Associate"
+"targetname" "cr33"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "-1"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "SUBJECT:\nGordon Freeman\nMale, age 27"
+"targetname" "cr31"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "0.65"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "Welcome to Sven Co-op Half-Life"
+"targetname" "OPENTITLE3_2"
+}
+{
+"spawnflags" "1"
+"x" "-1"
+"y" "0.65"
+"effect" "2"
+"color" "240 110 0"
+"color2" "240 110 0"
+"fadein" "0.01"
+"fadeout" "1.5"
+"fxtime" "0.25"
+"holdtime" "3.5"
+"message" "Welcome to Sven Co-op Half-Life"
+"targetname" "OPENTITLE3_1"
+}

@@ -1,0 +1,60 @@
+monster_alien_controller
+disparar rafagas azules que curan a sus aliados
+
+monster_alien_grunt
+los bees te envenenan
+
+monster_alien_slave
+si esta melee e intenta efectuar un ataque, este hace un stomp como black mesa
+si te golpea te paraliza
+
+monster_alien_tor
+spawnea mas que alien grunts
+
+monster_alien_voltigore
+insta explota
+
+monster_barnacle
+speed up anims
+
+monster_babygarg
+blindado a veces
+
+monster_bullchicken
+dispara en rafagas y da veneno acido
+
+monster_gargantua
+meleea rapido
+
+monster_gonome
+dispara en rafagas
+
+monster_handgrenade
+dibuja unos tracers random que golpean a distancia, solo solid ents o worldspawn lo bloquean
+
+monster_headcrab
+se voltea automaticamente
+
+monster_houndeye
+sacude la pantalla
+
+monster_human_grunt
+alertarse en squad setearle el enemy
+cambiar de armas
+morir lanzando una granada
+poder ver tripmines
+
+monster_shockroach
+cuando muere este explota
+
+monster_shocktrooper
+al morir dropea sporas
+
+monster_tripmine
+laser mas transparente
+
+monster_zombie
+dropear headcrab
+
+monster_headcrab
+transformarte en zombie

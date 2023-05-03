@@ -1,0 +1,352 @@
+//TITLES FOR HALF-LIFE
+// Position command $position x y 
+// x & y are from 0 to 1 to be screen resolution independent
+// -1 means center in each dimension
+// Effect command $effect <effect number>
+// effect 0 is fade in/fade out
+// effect 1 is flickery credits
+// effect 2 is write out (training room)
+// Text color r g b command $color
+// fadein time fadeout time / hold time
+// $fadein (message fade in time - per character in effect 2)
+// $fadeout (message fade out time)
+// $holdtime (stay on the screen for this long)
+
+// In-Game messages
+$position -1 0.65
+$effect 2
+$color 255 255 255
+$color2 255 255 255
+$fadein 0.01
+$fxtime 0.25
+$holdtime 2.0
+$fadeout 0.5
+
+GAMESAVED
+{
+Game Saved
+}
+
+// Intro title
+$position -1 -1
+$effect 0
+$color 255 255 255
+$color2 255 255 255
+$fadein 2.0
+$fxtime 0.25
+$holdtime 5.0
+$fadeout 3.0
+
+INTRO_TITLE1
+{
+H A L F - L I F E : U R B I C I D E
+}
+
+// Intro
+$position -1 -1
+$effect 2
+$color 255 255 255
+$color2 255 255 255
+$fadein 0.02
+$fxtime 0.25
+$holdtime 10.0
+$fadeout 1.0
+
+INTRO_MESSAGE1
+{
+Andersen went out a couple of hours ago but I haven't
+heard from him since. Hope he's okay.
+
+The gate to the warehouse got stuck from a nearby shockwave
+so we made a makeshift staircase, stacking a bunch of shit,
+in order to gain access to the window above. A dangerous but
+necessary task if we want to get out of this goddamn mess.
+}
+
+INTRO_MESSAGE2
+{
+I decided to stay here in case someone tried to contact us.
+So far I haven't heard anything.
+
+Apparently there's been some sort of invasion... aliens? Fuck if I know.
+Andersen and I heard it on the radio. Gunfire and distant bombings has
+filled the air the last couple of few hours. Sounds like hell outside.
+}
+
+// Intro2
+$position -1 -1
+$effect 2
+$color 255 255 255
+$color2 255 255 255
+$fadein 0.02
+$fxtime 0.25
+$holdtime 5.0
+$fadeout 1.0
+
+INTRO_MESSAGE3
+{
+My fiance is holed up in an apartment not far from the local hospital.
+I need to get there, find her and then get the fuck outta dodge.
+
+My military training from years ago ought to hopefully still hold up.
+}
+
+// Messages
+$position -1 0.65
+$effect 2
+$color 255 255 255
+$color2 255 255 255
+$fadein 0.02
+$fxtime 0.25
+$holdtime 5.0
+$fadeout 1.0
+
+ANDERSEN
+{
+Damnit, Andersen... he only had two days left until retirement...
+}
+
+STREETS
+{
+Unless I want to end up like these guys I should probably keep a
+low profile and stay off the streets just to be safe.
+}
+
+NAILED_DOOR
+{
+The door is nailed shut. I should look around and see if I can
+find something to tear down the board.
+}
+
+LOCKED_GRATE
+{
+Damnit, the grate is locked. If I could only find a weapon to
+shoot the yellow lock to break it.
+}
+
+KEY1
+{
+I picked up a key. Could be useful.
+}
+
+KEY_LOCKED
+{
+Door is locked. Must be a key somewhere around here.
+}
+
+CANDY
+{
+Om nom nom!
+}
+
+CANDY2
+{
+Gotta go easy on the sugar there...
+}
+
+SEWER_SHIT
+{
+The hospital shouldn't be too far off. I just have to wade
+through this shit-infested sludge. Oh boy.
+}
+
+HOSPITAL_BASEMENT
+{
+This must be the basement of the hospital. I should check
+and see if I can find a working elevator.
+}
+
+HOSPITAL_ELEV
+{
+I should check out the elevator. Perhaps it's working now.
+}
+
+HOSPITAL_MAIN
+{
+It's a goddamn warzone out there. The rooftop is probably
+a safer area to traverse. I should look for an elevator
+that takes me to the roof... or perhaps the stairs are
+a better alternative.
+}
+
+FUCKING_KEY
+{
+Well, what a surprise. The goddamn door is locked. 
+}
+
+KEY_CARD
+{
+Found a key card. I should go back to the main entrance
+and see if this card works on the door to the stairwell.
+}
+
+DUMPSTER
+{
+Aim for the bushes?... uh, I mean garbage pile.
+}
+
+TOO_OLD
+{
+I'm getting too old for this shit.
+}
+
+REBECCA
+{
+Rebecca...!? FUCK! Gotta get to the fourth floor.
+}
+
+// Bruce Messages
+$position -1 0.65
+$effect 2
+$color 255 255 255
+$color2 255 255 255
+$fadein 0.02
+$fxtime 0.25
+$holdtime 2.0
+$fadeout 1.0
+
+REBECCA2
+{
+Yo, Reb. You in there?
+}
+
+REBECCA4
+{
+Hey, babe. Let's get the fuck outta here.
+}
+
+// Rebecca Messages
+$position -1 0.70
+$effect 2
+$color 170 0 255
+$color2 170 0 255
+$fadein 0.02
+$fxtime 0.25
+$holdtime 3.0
+$fadeout 1.0
+
+REBECCA3
+{
+Oh, Bruce. My hero!
+}
+
+//Credits
+$position -1 -1
+$effect 1
+$color 255 255 255
+$color2 255 255 255
+$fadein 2 
+$fxtime 1 
+$holdtime 8 
+$fadeout 6
+
+credits1
+{
+H A L F - L I F E : U R B I C I D E
+}
+
+/Credits
+$position -1 -1
+$effect 0
+$color 255 255 255
+$color2 255 255 255
+$fadein 1 
+$fxtime 1 
+$holdtime 8 
+$fadeout 4
+
+credits2
+{
+Additional credits to:
+
+James "Jblade35" Stanfield for testing
+
+[ThatGenericPyro] for the scientist hands
+
+Solokiller for updated Half-Life source code
+
+BrussTrigger for the updated human grunt models
+
+Infinity Ward and Activision for Call of Duty: Modern Warfare 2
+
+Ritual, Turtle Rock and Valve for Counter-Strike: Condition Zero
+
+The Half-Life: Nightwatch team and their textures
+
+Mindmotor.Studios for the Poke646/Vendetta textures
+
+DiscountKiller for his Big Ol' Texture Pack
+
+Dethtex for the dt_nyc_firstbatch texture pack
+
+Locknut for the STLOUIS texture pack
+
+MasterPlan for the Chronic texture pack
+
+Unknown author for the Sunny Woods texture pack
+
+Myuu for soundtrack
+
+Ian Laurence for soundtrack
+
+Gerardo Garcia Jr. for soundtrack
+
+Mikael Manvelyan for soundtrack
+
+Boris Skalsky for soundtrack
+
+Michael Vignola for soundtrack
+}
+
+credits3
+{
+Sven Co-op Team
+
+Valve Corporation
+
+Gearbox Software
+
+3D Realms
+
+SleepTherapy
+
+https://twhl.info
+
+www.freesound.org
+
+www.gamer-lab.com
+
+www.storyblocks.com
+
+www.thedarkpiano.com
+
+www.avosound.com
+
+www.pixabay.com
+
+www.gamer-lab.com
+
+www.pexels.com
+}
+
+credits4
+{
+My contact details:
+
+thibiasfast_@hotmail.com // thobias.fast@gmail.com
+}
+
+//Credits TFP
+$position -1 -1
+$effect 0
+$color 255 255 255
+$color2 255 255 255
+$fadein 2 
+$fxtime 1 
+$holdtime 10 
+$fadeout 6
+
+credits5
+{
+Thanks for playing.
+}

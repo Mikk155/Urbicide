@@ -1,0 +1,258 @@
+
+	skill(choices) : "Skill setting" : 0 =
+	[
+		0 : "All skills"
+		1 : "Not in easy"
+		2 : "Not in medium"
+		4 : "Not in hard"
+		6 : "Only in easy"
+		5 : "Only in medium"
+		3 : "Only in hard"
+	]
+@BaseClass base(Targetname, Angles, MoveWith) size(-16 -16 -16, 16 16 16) = gibshooterbase
+[
+	m_iGibs(integer) : "Number of shots" : 1
+	delay(string) : "Delay between shots" : "0"
+	m_iszPosition(string) : "At position (blank = here) [LP]"
+	m_iszVelocity(string) : "At velocity (blank = angle) [LV]"
+	m_flVelocity(string) : "Gib Speed Factor [LR]" : "200"
+	m_flVariance(string) : "Course Variance" : "0.15"
+	m_flGibLife(string) : "Shot lifetime (secs)" : "4"
+	m_iszTargetName(string) : "Shot's name"
+	m_iszSpawnTarget(string) : "Fire on spawn (locus = shot)"
+	spawnflags(Flags) =
+	[
+		1 : "Repeatable" 	: 0
+		4 : "Debug" 	: 0
+	]
+]
+	spawnobject(choices) : "Spawn On Break" : 0 =
+	[
+		0: "Nothing"
+		1: "Battery"
+		2: "Healthkit"
+		3: "9mm Handgun"
+		4: "9mm Clip"
+		5: "Machine Gun"
+		6: "Machine Gun Clip"
+		7: "Machine Gun Grenades"
+		8: "Shotgun"
+		9: "Shotgun Shells"
+		10: "Crossbow"
+		11: "Crossbow Bolts"
+		12: "357"
+		13: "357 clip"
+		14: "RPG"
+		15: "RPG Clip"
+		16: "Gauss clip"
+		17: "Hand grenade"
+		18: "Tripmine"
+		19: "Satchel Charge"
+		20: "Snark"
+		21: "Hornet Gun"
+	]
+]
+@SolidClass base(Targetname, MoveWith) iconsprite("sprites/env.spr") = env_rain : "Rain Effect"
+[
+	angles(string) : "Pitch Yaw Roll (Y Z X)" : "0 0 0"
+	m_dripSpeed(integer) : "Drip Speed" : 40
+	m_dripSize(integer) : "Drip Width" : 5
+	m_brightness(integer) : "Drip Brightness (1 - 255)" : 128
+	rendercolor(color255) : "Drip Color (R G B)" : "64 128 255"
+	m_iNoise(integer) : "Beam noise (distortion)" : 0
+	m_burstSize(integer) : "Number of drips per update" : 2
+	m_flUpdateTime(string) : "Time between updates" : "0.5"
+	m_flMaxUpdateTime(string) : "Max time between updates (random)"
+	target(string) : "Fire on updating"
+	m_fLifeTime(string) : "Beam Lifetime (0 = three updates)"
+	texture(sprite) : "Drip Sprite" : "sprites/rain.spr"
+	m_axis(choices) : "Beam Direction" : 0 =
+	[
+		0 : "Z axis (vertical)"
+		1 : "X axis"
+		2 : "Y axis"
+	]
+	m_iExtent(choices) : "Extent type" : 1 =
+	[
+		0 : "Fill brush"
+		1 : "Obstructable"
+		3 : "Reverse obstructable"
+		2 : "Arcing"
+		4 : "Reverse arcing"
+		5 : "Arcing Through"
+	]
+	spawnflags(Flags) =
+	[
+		1 : "Start Off" 	: 0
+	]
+]
+@PointClass base(gibshooterbase, RenderFields) size(-16 -16 -16, 16 16 16) studio()= env_shooter : "Model Shooter"
+[
+	shootmodel(studio) : "Model or Sprite name" : "sprites/ballsmoke.spr"
+	noise(string) : "Scale [LR]" : ""
+	skin(integer) : "Skin" : 0
+	body(integer) : "Body (models only)"
+	frame(integer) : "Start frame" : 0
+	framerate(string) : "Framerate" : "10.0"
+	m_iPhysics(choices) : "Behaviour of children" : 0 =
+	[
+		0: "Bouncy gib (normal)"
+		1: "Sticky gib"
+		2: "Noclip"
+		3: "Fly (ignore gravity)"
+		4: "Fly & bounce"
+		5: "Arc (obey gravity)"
+		6: "Arc & bounce"
+	]
+	m_iBloodColor(choices) : "Blood color" : 0 =
+	[
+		0 : "Don't bleed"
+		247 : "Red (human)"
+		195 : "Yellow (alien)"
+	]
+	shootsounds(choices) :"Material Sound" : -1 =
+	[
+		-1: "None"
+		0: "Glass"
+		1: "Wood"
+		2: "Metal"
+		3: "Flesh"
+		4: "Concrete"
+	]
+	m_fFriction(string) : "Bounce height" : "0.55"
+	m_iszTouch(string) : "Fire on collision (locus = shot)"
+	m_iszTouchOther(string) : "Fire on collision (locus = wall)"
+	m_vecSize(string) : "Shot size (X Y Z)" : "0 0 0"
+]
+@PointClass base(Targetname, Master) color(128 128 255) iconsprite("sprites/env.spr") = env_state : "Local State"
+[
+	target(target_destination) : "Target (on & off)"
+	noise1(target_destination) : "Fire when turned on"
+	noise2(target_destination) : "Fire when turned off"
+	turnontime(string) : "Time taken to turn on" : "0"
+	turnofftime(string) : "Time taken to turn off" : "0"
+	spawnflags(flags) =
+	[
+		1 : "Start On" : 0
+		2 : "Debug Mode" : 0
+	]
+]
+@PointClass base(Targetname, MoveWith) iconsprite("sprites/env.spr") = env_warpball : "Teleport-in effect"
+[
+      target(string) : "Initial position (blank = here) [LP]"
+	health(string) : "Max lightning-arc length" : "90"
+	frags(integer) : "Number of lightning bolts" : 12
+]
+@SolidClass base(Targetname, MoveWith, RenderFields, ZHLTLightKeys) = func_ladder : "Ladder"
+[
+	spawnflags(flags) =
+	[
+		1 : "Visible"    : 0
+	]
+]
+@SolidClass base(Targetname, Target, Angles, Master, MoveWith, RenderFields, ZHLTLightKeys) = momentary_rot_button : "Direct wheel control"
+[
+	speed(integer) : "Speed" : 50
+	axes(string) : "Axis Multipliers (Y Z X)" : "0 0 0"
+	sounds(choices) : "Sounds" : 0 =
+	[
+		0: "None"
+		1: "Big zap & Warmup"
+		2: "Access Denied"
+		3: "Access Granted"
+		4: "Quick Combolock"
+		5: "Power Deadbolt 1"
+		6: "Power Deadbolt 2"
+		7: "Plunger"
+		8: "Small zap"
+		9: "Keycard Sound"
+		21: "Squeaky"
+		22: "Squeaky Pneumatic"
+		23: "Ratchet Groan"
+		24: "Clean Ratchet"
+		25: "Gas Clunk"
+	]
+	distance(integer) : "Distance (deg)" : 90
+	returnspeed(integer) : "Auto-return speed" : 0
+	spawnflags(flags) =
+	[
+		1: "Door Hack"    : 0
+		2: "Not useable"  : 0
+		16: "Auto Return" : 0
+		64: "X Axis"      : 0
+		128: "Y Axis"     : 0
+	]
+	_minlight(integer) : "_minlight"
+	angles(string) : "Pitch Yaw Roll (Y Z X)" : "0 0 0"
+]
+@PointClass base(Targetname) size(-16 -16 -16, 16 16 16) = player_freeze : "Stop player from moving"
+[
+	delay(string) : "Duration (0 = until retriggered)" : "5"
+	spawnflags(Flags) =
+	[
+		1: "Affect locus" : 0
+	]
+]
+@SolidClass base(Targetname, Target, Master, MoveWith) = trigger_hurt : "Trigger player hurt"
+[
+	spawnflags(flags) =
+	[
+		1: "Fire once"     : 0
+		2: "Start Off"       : 0
+		8: "No clients"      : 0
+		16:"Only when fired"  : 0
+		32:"Only on touch" : 0
+	]
+	dmg(integer) : "Damage" : 10
+	delay(string) : "Delay before trigger" : "0"
+	damagetype(choices) : "Damage Type" : 0 =
+	[
+		0 : "GENERIC"
+		1 : "CRUSH"
+		2 : "BULLET"
+		4 : "SLASH"
+		8 : "BURN"
+		16 : "FREEZE"
+		32 : "FALL"
+		64 : "BLAST"
+		128 : "CLUB"
+		256 : "SHOCK"
+		512 : "SONIC"
+		1024 : "ENERGYBEAM"
+		16384: "DROWN"
+		32768 : "PARALYSE"
+		65536 : "NERVEGAS"
+		131072 : "POISON"
+		262144 : "RADIATION"
+		524288 : "DROWNRECOVER"
+		1048576 : "CHEMICAL"
+		2097152 : "SLOWBURN"
+		4194304 : "SLOWFREEZE"
+	]
+	cangib(choices) : "To gib or not to gib" : 0 =
+	[
+		0 : "Normal"
+		1 : "Always gib"
+		2 : "Never gib"
+	]
+]
+@PointClass base(Targetname, Master, MoveWith) iconsprite("sprites/trigger.spr") = trigger_onsight : "Trigger when A sees B"
+[
+	netname(string) : "Looking entity (blank=player)"
+	message(string) : "Entity/classname to look at"
+	target(string) : "Fire when seen"
+	noise(string) : "Fire when no longer seen"
+	noise1(string) : "Fire on/off (seen/not seen)"
+	frags(string) : "View range (0=unlimited)" : "512"
+	max_health(choices) : "Field of view (degrees)" : 90 =
+	[
+		-1 : "(-1): Use monster's view"
+	]
+	spawnflags(flags) =
+	[
+		1: "No LOS check" : 0
+		2: "Seethru glass" : 0
+		4: "Check State of 'looker'" : 0
+	]
+]
+@PointClass base(Weapon) = weapon_debug : "Debugger" []
