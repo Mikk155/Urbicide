@@ -1,0 +1,23 @@
+--== Instalação ==--
+
+1. Extraia e Copie a pasta "hl_urbicide_addon" para dentro da pasta "Half-Life", exemplo:
+
+"C:\Program Files (x86)\Steam\steamapps\common\Half-Life" > Coloque a pasta aqui dentro.
+
+2. Entre no Steam e execute o mod.
+
+3. Nas opções de vídeo, procure por "allow custom addon content" e ative esta opção para permitir os addons.
+3.1 Não esqueça de APLICAR as mudanças para permitir os addons. Caso contrário, a tradução não funcionará.
+
+4. O mod deve estar traduzido agora. Aproveite!
+
+--== Observações ==-- 
+
+Se encontrar algum bug ou quiser melhorar a tradução, pode me contatar pelo chat do MODDB!
+
+Caso tenha encontrado problemas sérios, fale comigo pelo MODDB e
+explique os problemas com detalhes, que tentarei resolver.
+
+Deixe um comentário com o seu feedback!
+
+Obrigado por jogar com a nossa tradução!
