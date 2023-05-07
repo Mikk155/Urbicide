@@ -1,5 +1,0 @@
-{
-"effect" "5"
-"targetname" "mlang_credits"
-"message_spanish" "Traducido por Mikk"
-}

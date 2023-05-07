@@ -1,11 +1,4 @@
-/*
 
-// INSTALLATION:
-
-#include "mikk/game_stealth"
-
-*/
-#include 'utils'
 namespace script
 {
     void ScriptInfo()

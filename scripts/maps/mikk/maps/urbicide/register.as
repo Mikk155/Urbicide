@@ -1,30 +1,33 @@
-#include '../../ammo_custom'
+// #include '../../ammo_custom'
 
 #include '../../config_classic_mode'
-#include '../../config_map_cvar'
-#include '../../config_survival_mode'
+#include '../../config_map_cvars'
 
-#include '../../env_bloodpuddle'
-#include '../../env_effects'
-#include '../../env_fade_custom'
-#include '../../env_message_custom'
+// #include '../../env_bloodpuddle'
+// #include '../../env_effects'
+// #include '../../env_fade_custom'
 
+#include '../../game_debug'
 #include '../../game_text_custom'
-#include '../../game_zone_entity'
+// #include '../../game_zone_entity'
 
+#include '../../info_commentary'
+
+#include '../../pev_effects'
+
+#include '../../player_command'
 #include '../../player_data'
-#include '../../player_flashlight'
-#include '../../player_reequipment'
 
+#include '../../trigger_autosave'
 #include '../../trigger_manager'
-#include '../../trigger_teleport_relative'
+#include '../../trigger_multiple_custom'
 
 // #include '../../../ins2/handg/weapon_ins2usp'
 
 void Register()
 {
 }
-
+/*
 namespace ULIFE
 {
     void BossHealth( CBaseEntity@ pboss, CBaseEntity@ pCaller, USE_TYPE useType, float flValue )
@@ -57,4 +60,4 @@ namespace ULIFE
         {
         }
     }
-}
+}*/

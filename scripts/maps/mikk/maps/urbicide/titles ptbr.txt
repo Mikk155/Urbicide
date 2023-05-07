@@ -1,0 +1,235 @@
+
+
+LOCKED_GRATE
+{
+Droga, a grade tá trancada. Se pudesse só encontrar uma arma
+para atirar no cadeado amarelo para quebrá-lo.
+}
+
+KEY1
+{
+Peguei uma chave. Deve ser útil.
+}
+
+KEY_LOCKED
+{
+A porta tá trancada. Deve ter alguma chave por aqui.
+}
+
+CANDY
+{
+Om nom nom!
+}
+
+CANDY2
+{
+Melhor maneirar no açúcar...
+}
+
+SEWER_SHIT
+{
+O hospital não deve estar muito longe. Só preciso passar
+por essa merda de imundície. Ah cara.
+}
+
+HOSPITAL_BASEMENT
+{
+Esse deve ser o porão do hospital. Deveria checar e ver se
+consigo encontrar um elevador que funcione.
+}
+
+HOSPITAL_ELEV
+{
+Deveria checar o elevador. Talvez esteja funcionando agora.
+}
+
+HOSPITAL_MAIN
+{
+Está uma maldita zona de guerra lá fora. O telhado deve
+estar mais seguro para atravessar. Deveria procurar por
+um elevador que me leve até lá... ou talvez as escadas
+sejam uma alternativa melhor.
+}
+
+FUCKING_KEY
+{
+Bem, que surpresa. A maldita porta está trancada. 
+}
+
+KEY_CARD
+{
+Encontrei um cartão. Eu deveria voltar para a entrada
+principal e verificar se o cartão funciona na porta
+para a escadaria.
+}
+
+DUMPSTER
+{
+Mirar nos arbustos? eh, digo, na pilha de lixo.
+}
+
+TOO_OLD
+{
+Eu tô ficando muito velho pra essa merda.
+}
+
+REBECCA
+{
+Rebecca...!? PORRA! Preciso chegar no quarto andar.
+}
+
+// Bruce Messages
+$position -1 0.65
+$effect 2
+$color 255 255 255
+$color2 255 255 255
+$fadein 0.02
+$fxtime 0.25
+$holdtime 2.0
+$fadeout 1.0
+
+REBECCA2
+{
+Ei, Reb. Tá aí?
+}
+
+REBECCA4
+{
+Ei, amor. Vamos sair desse inferno.
+}
+
+// Rebecca Messages
+$position -1 0.70
+$effect 2
+$color 170 0 255
+$color2 170 0 255
+$fadein 0.02
+$fxtime 0.25
+$holdtime 3.0
+$fadeout 1.0
+
+REBECCA3
+{
+Oh, Bruce. Meu herói!
+}
+
+//Credits
+$position -1 -1
+$effect 1
+$color 255 255 255
+$color2 255 255 255
+$fadein 2 
+$fxtime 1 
+$holdtime 8 
+$fadeout 6
+
+credits1
+{
+H A L F - L I F E : U R B I C I D E
+}
+
+/Credits
+$position -1 -1
+$effect 0
+$color 255 255 255
+$color2 255 255 255
+$fadein 1 
+$fxtime 1 
+$holdtime 8 
+$fadeout 4
+
+credits2
+{
+Créditos adicionais para:
+
+James "Jblade35" Stanfield por testar
+
+[ThatGenericPyro] pelas mãos do cientista
+
+Solokiller pelo código fonte atualizado do Half-Life
+
+BrussTrigger pelos modelos atualizados dos militares humanos
+
+Infinity Ward e Activision pelo Call of Duty: Modern Warfare 2
+
+Ritual, Turtle Rock e Valve pelo Counter-Strike: Condition Zero
+
+O time do Half-Life: Nightwatch e suas texturas
+
+Mindmotor.Studios pelas texturas do Poke646/Vendetta
+
+DiscountKiller pelo "Big Ol' Texture Pack"
+
+Dethtex pelo pacote de textura dt_nyc_firstbatch
+
+Locknut pelo pacote de texturas STLOUIS
+
+MasterPlan pelo pacote de textura Chronic
+
+Autor desconhecido pelo pacote de texturas Sunny Woods
+
+Myuu pela trilha sonora
+
+Ian Laurence pela trilha sonora
+
+Gerardo Garcia Jr. pela trilha sonora
+
+Mikael Manvelyan pela trilha sonora
+
+Boris Skalsky pela trilha sonora
+
+Michael Vignola pela trilha sonora
+}
+
+credits3
+{
+Sven Co-op Team
+
+Valve Corporation
+
+Gearbox Software
+
+3D Realms
+
+SleepTherapy
+
+https://twhl.info
+
+www.freesound.org
+
+www.gamer-lab.com
+
+www.storyblocks.com
+
+www.thedarkpiano.com
+
+www.avosound.com
+
+www.pixabay.com
+
+www.gamer-lab.com
+
+www.pexels.com
+}
+
+credits4
+{
+Minhas informações de contato:
+
+thibiasfast_@hotmail.com // thobias.fast@gmail.com
+}
+
+//Credits TFP
+$position -1 -1
+$effect 0
+$color 255 255 255
+$color2 255 255 255
+$fadein 2 
+$fxtime 1 
+$holdtime 10 
+$fadeout 6
+
+credits5
+{
+Obrigado por jogar.
+}

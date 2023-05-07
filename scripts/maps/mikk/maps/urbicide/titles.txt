@@ -27,6 +27,16 @@ GAMESAVED
 Game Saved
 }
 
+GAMESAVED_spanish
+{
+Guardado
+}
+
+GAMESAVED_portuguese
+{
+Jogo salvo...
+}
+
 // Intro title
 $position -1 -1
 $effect 0
@@ -63,6 +73,28 @@ in order to gain access to the window above. A dangerous but
 necessary task if we want to get out of this goddamn mess.
 }
 
+INTRO_MESSAGE1_spanish
+{
+Andersen salio hace un par de horas pero no he
+sabido de ella desde entonces. Espero que este bien.
+
+La puerta del almacen se atasco debido a una onda de choque cercana.
+Asi que hicimos una escalera improvisada, apilando un monton 
+de mierda, para acceder a la ventana de arriba. Una peligrosa 
+tarea pero necesaria si queremos salir de este maldito lio.
+}
+
+INTRO_MESSAGE1_portuguese
+{
+Andersen saiu a poucas horas atrás, mas não ouvi
+nada dele desde então. Espero que ele esteja bem.
+
+O portão para o depósito ficou preso por causa de uma
+onda de choque, então nós improvisamos uma escada empilhando
+umas tralhas, para chegar até a janela acima. Uma tarefa
+perigosa mas necessária se quisermos escapar dessa confusão.
+}
+
 INTRO_MESSAGE2
 {
 I decided to stay here in case someone tried to contact us.
@@ -71,6 +103,28 @@ So far I haven't heard anything.
 Apparently there's been some sort of invasion... aliens? Fuck if I know.
 Andersen and I heard it on the radio. Gunfire and distant bombings has
 filled the air the last couple of few hours. Sounds like hell outside.
+}
+
+INTRO_MESSAGE2_spanish
+{
+Decidi quedarme aqui en caso de que alguien intentara llamarnos.
+Hasta ahora no he escuchado nada.
+
+Aparentemente ha habido algun tipo de invasion... extraterrestres? 
+Joder si lo se.
+Andersen y yo lo escuchamos en la radio. Los disparos y los bombardeos 
+distantes han llenado el aire hace unas horas. Suena como el 
+infierno fuera.
+}
+
+INTRO_MESSAGE2_portuguese
+{
+Decidi ficar aqui no caso de alguém tentar nos contatar.
+Não cheguei a ouvi nada até então.
+
+Aparentemente houve algum tipo de invasão... alienígena? Sei lá porra.
+Andersen e eu ouvimos isso no rádio. Tiroteio e bombardeios distantes
+tomaram conta nas últimas poucas horas. Soa como o inferno lá fora.
 }
 
 // Intro2
@@ -91,6 +145,23 @@ I need to get there, find her and then get the fuck outta dodge.
 My military training from years ago ought to hopefully still hold up.
 }
 
+INTRO_MESSAGE3_spanish
+{
+Mi prometida esta escondida en un apartamento no muy lejos del hospital 
+local.
+Necesito llegar alli, encontrarla y despues largarnos de una puta vez.
+
+Con suerte, mi entrenamiento militar de hace anos deberia mantenerse.
+}
+
+INTRO_MESSAGE3_portuguese
+{
+Minha noiva está presa em um apartamento não muito longe do hospital
+local. Preciso chegar lá, encontrá-la e então sair dessa bosta.
+
+Meu treinamento militar de anos atrás deve me ajudar a me manter de pé.
+}
+
 // Messages
 $position -1 0.65
 $effect 2
@@ -106,16 +177,51 @@ ANDERSEN
 Damnit, Andersen... he only had two days left until retirement...
 }
 
+ANDERSEN_spanish
+{
+Maldita sea, Andersen... solo le quedaban dos dias para jubilarse...
+}
+
+ANDERSEN_portuguese
+{
+Droga, Andersen... só faltava dois dias para se aposentar...
+}
+
 STREETS
 {
 Unless I want to end up like these guys I should probably keep a
 low profile and stay off the streets just to be safe.
 }
 
+STREETS_spanish
+{
+A menos que quiera acabar como estos chicos, probablemente deberia 
+mantener un perfil bajo y mantenerme alejado de las calles 
+solo para estar seguro.
+}
+
+STREETS_portuguese
+{
+A não ser que queira acabar como esses caras, deveria ficar na
+maciota e ficar fora das ruas, só por precaução.
+}
+
 NAILED_DOOR
 {
 The door is nailed shut. I should look around and see if I can
 find something to tear down the board.
+}
+
+NAILED_DOOR_spanish
+{
+La puerta esta cerrada con clavos. Deberia mirar alrededor 
+y ver si puedo encontrar algo para derribar el tablon.
+}
+
+NAILED_DOOR_portuguese
+{
+A porta tá bloqueada com essa prancha. Melhor procurar por aí
+e encontrar algo para removê-la.
 }
 
 LOCKED_GRATE
