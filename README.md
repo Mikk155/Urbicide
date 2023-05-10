@@ -2,20 +2,20 @@
 
 # Tasks:
 
-#### Optimize maps ![30%](https://progress-bar.dev/100)
+#### Optimize maps ![ProgressBar](https://progress-bar.dev/30)
 
-#### Merge maps ![0%](https://progress-bar.dev/100)
+#### Merge maps ![ProgressBar](https://progress-bar.dev/0)
 
-#### Change path files ![5%](https://progress-bar.dev/100)
+#### Change path files ![ProgressBar](https://progress-bar.dev/5)
 
-#### Fixed general issues ![100%](https://progress-bar.dev/100)
+#### Fixed general issues ![ProgressBar](https://progress-bar.dev/100)
 
-#### trigger_autosave ![100%](https://progress-bar.dev/100)
+#### trigger_autosave ![ProgressBar](https://progress-bar.dev/100)
 
-#### trigger_entity_loader ![100%](https://progress-bar.dev/100)
+#### trigger_entity_loader ![ProgressBar](https://progress-bar.dev/100)
 
-#### monster_urbboss ![0%](https://progress-bar.dev/100)
+#### monster_urbboss ![ProgressBar](https://progress-bar.dev/0)
 
-#### monster_apache_custom ![0%](https://progress-bar.dev/100)
+#### monster_apache_custom ![ProgressBar](https://progress-bar.dev/0)
 
-#### game_classicmode ![50%](https://progress-bar.dev/100)
+#### game_classicmode !ProgressBar](https://progress-bar.dev/50)
