@@ -1,0 +1,319 @@
+hlcsg v4.3-VLV34-SC5.25 64-bit (Jan  1 2022)
+Zoner's Half-Life Compilation Tools -- Custom build for Sven Co-op 5.25
+Based on code modifications by Vluzacn (VLV34)
+Based on code modifications by Sean "Zoner" Cavanaugh (4.3)
+Based on Valve's version, modified with permission.
+
+A full list of contributors can be found at http://zhlt.info/credits.html
+
+For help and support please use the official discord channel: https://discord.gg/yZxs6nJs3n
+-----  BEGIN  hlcsg -----
+Command line: "C:/Program Files (x86)/Steam/steamapps/common/Sven Co-op SDK/mapping/compilers/SC-CSG_x64.exe" "C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a" 
+Arguments: "C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a" 
+Entering C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a.map
+
+-= Current hlcsg Settings =-
+Setting                        |  Map value            |  Default value        
+-------------------------------|-----------------------|-----------------------
+Verbose                         [                 off ] [                 off ]
+Log                             [                  on ] [                  on ]
+Developer mode                  [                   0 ] [                   0 ]
+Estimate times                  [                 off ] [                 off ]
+Statistics chart                [                 off ] [                 off ]
+CPU thread count                [                   2 ] [              Varies ]
+CPU process priority            [              Normal ] [              Normal ]
+Texture data memory limit       [            67108864 ] [            67108864 ]
+Lighting data memory limit      [            67108864 ] [            67108864 ]
+
+Entities only                   [                 off ] [                 off ]
+WAD textures                    [                  on ] [                  on ]
+Clipping hull generation        [                  on ] [                 off ]
+Clipping economy mode           [                 off ] [                 off ]
+Clipping hull type              [              Simple ] [              Simple ]
+Custom hull file                [                None ] [                None ]
+Sky brush clipping              [                  on ] [                  on ]
+Minimum surface area            [               0.000 ] [               0.000 ]
+Brush union threshold           [               0.000 ] [               0.000 ]
+NULL texture substitutions file [                None ] [                None ]
+WAD configuration file          [                None ] [                None ]
+WAD configuration name          [                None ] [                None ]
+WAD auto-detect                 [                 off ] [                  on ]
+Strip null texture faces        [                  on ] [                  on ]
+Strip trigger texture faces     [                  on ] [                  on ]
+Optimize engine light entities  [                  on ] [                  on ]
+Convert game_text ANSI to UTF-8 [                  on ] [                  on ]
+Scale the world                 [                None ] [                None ]
+
+
+Using mapfile wad configuration
+Wadinclude list :
+[zhlt.wad]
+
+CreateBrush:
+ (4.28 seconds)
+CSGBrush:
+ (2.70 seconds)
+
+added 5 additional animating textures.
+Including Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop/zhlt.wad
+ - Contains 2 used textures, 0.87 percent of map (19 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop/barney.wad
+ - Contains 13 used textures, 5.63 percent of map (408 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop/Opfor.wad
+ - Contains 2 used textures, 0.87 percent of map (332 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop/nw.wad
+ - Contains 82 used textures, 35.50 percent of map (1319 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop_addon/STLOUIS.wad
+ - Contains 1 used texture, 0.43 percent of map (32 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop_addon/chronic.wad
+ - Contains 8 used textures, 3.46 percent of map (83 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop_addon/dkbigoltexturepak.wad
+ - Contains 20 used textures, 8.66 percent of map (1390 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop_addon/dt_nyc_firstbatch.wad
+ - Contains 0 used textures, 0.00 percent of map (28 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop_addon/poke646.wad
+ - Contains 39 used textures, 16.88 percent of map (748 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop_addon/sunnywoods.wad
+ - Contains 1 used texture, 0.43 percent of map (87 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop_addon/urbicide.wad
+ - Contains 0 used textures, 0.00 percent of map (61 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop_addon/vendetta.wad
+ - Contains 31 used textures, 13.42 percent of map (858 textures in wad)
+Using Wadfile: /Program Files (x86)/Steam/steamapps/common/Sven Co-op/svencoop/halflife.wad
+ - Contains 32 used textures, 13.85 percent of map (3116 textures in wad)
+
+Wad files required to run the map: "barney.wad;Opfor.wad;nw.wad;STLOUIS.wad;chronic.wad;dkbigoltexturepak.wad;dt_nyc_firstbatch.wad;poke646.wad;sunnywoods.wad;urbicide.wad;vendetta.wad;halflife.wad;"
+Texture usage is at 8.91 mb (of 64.00 mb MAX)
+8.13 seconds elapsed
+
+-----   END   hlcsg -----
+
+
+
+hlbsp v4.3-VLV34-SC5.25 64-bit (Jan  1 2022)
+Zoner's Half-Life Compilation Tools -- Custom build for Sven Co-op 5.25
+Based on code modifications by Vluzacn (VLV34)
+Based on code modifications by Sean "Zoner" Cavanaugh (4.3)
+Based on Valve's version, modified with permission.
+
+A full list of contributors can be found at http://zhlt.info/credits.html
+
+For help and support please use the official discord channel: https://discord.gg/yZxs6nJs3n
+-----  BEGIN  hlbsp -----
+Command line: "C:/Program Files (x86)/Steam/steamapps/common/Sven Co-op SDK/mapping/compilers/SC-BSP_x64.exe" "C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a" 
+Arguments: "C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a" 
+
+-= Current hlbsp Settings =-
+Setting                        |  Map value            |  Default value        
+-------------------------------|-----------------------|-----------------------
+Verbose                         [                 off ] [                 off ]
+Log                             [                  on ] [                  on ]
+Developer mode                  [                   0 ] [                   0 ]
+Estimate times                  [                 off ] [                 off ]
+Statistics chart                [                 off ] [                 off ]
+CPU thread count                [                   2 ] [              Varies ]
+CPU process priority            [              Normal ] [              Normal ]
+Texture data memory limit       [            67108864 ] [            67108864 ]
+Lighting data memory limit      [            67108864 ] [            67108864 ]
+
+Leak only mode                  [                 off ] [                 off ]
+Face subdivide size             [                 528 ] [                 528 ]
+Maximum portal node size        [                1024 ] [                1024 ]
+Don't break edges on T-juncs?   [                 off ] [                 off ]
+Don't smooth brinks?            [                 off ] [                 off ]
+Don't process the clipping hull?[                 off ] [                 off ]
+Don't fill outside?             [                 off ] [                 off ]
+Don't fill empty spaces?        [                 off ] [                 off ]
+Don't optimize planes?          [                 off ] [                 off ]
+Don't optimize clip nodes?      [                 off ] [                 off ]
+Don't strip NULL textures?      [                 off ] [                 off ]
+Don't generate hull 2?          [                 off ] [                 off ]
+Show portal boundaries in PTS?  [                 off ] [                 off ]
+
+
+SolidBSP [hull 0] 500...1000...1500...2000...2500...3000...3500...4000...4500...5000...5500...6000...6500...7000...7500...8000...8500...8577 (1.40 seconds)
+BSP generation successful, writing portal file 'C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a.prt'
+SolidBSP [hull 1] 500...1000...1500...2000...2500...3000...3500...4000...4500...5000...5286 (0.95 seconds)
+SolidBSP [hull 2] 500...1000...1500...2000...2500...3000...3500...4000...4500...4530 (0.90 seconds)
+SolidBSP [hull 3] 500...1000...1500...2000...2500...3000...3500...4000...4500...5000...5500...5705 (2.11 seconds)
+Warning: Ambiguous leafnode content ( EMPTY and SOLID ) at (-132,6,-30)-(-47,16,-11) in hull 0 of model 96 (entity: classname "func_tracktrain", origin "-610 -712 1150", targetname "plane1")
+Warning: Ambiguous leafnode content ( EMPTY and SOLID ) at (-132,-16,-30)-(-47,-6,-11) in hull 0 of model 96 (entity: classname "func_tracktrain", origin "-610 -712 1150", targetname "plane1")
+Reduced 15138 clipnodes to 13605
+Reduced 5349 texinfos to 5297
+Reduced 231 texdatas to 229 (12392 bytes to 11192)
+Reduced 25160 planes to 6770
+FixBrinks:
+Increased 13605 clipnodes to 13757.
+11.32 seconds elapsed
+
+-----   END   hlbsp -----
+
+
+
+hlvis v4.3-VLV34-SC5.25 64-bit (Jan  1 2022)
+Zoner's Half-Life Compilation Tools -- Custom build for Sven Co-op 5.25
+Based on code modifications by Vluzacn (VLV34)
+Based on code modifications by Sean "Zoner" Cavanaugh (4.3)
+Based on Valve's version, modified with permission.
+
+A full list of contributors can be found at http://zhlt.info/credits.html
+
+For help and support please use the official discord channel: https://discord.gg/yZxs6nJs3n
+-----  BEGIN  hlvis -----
+Command line: "C:/Program Files (x86)/Steam/steamapps/common/Sven Co-op SDK/mapping/compilers/SC-VIS_x64.exe" "C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a" 
+Arguments: "C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a" 
+ 884 portalleafs
+2335 numportals
+
+-= Current hlvis Settings =-
+Setting                        |  Map value            |  Default value        
+-------------------------------|-----------------------|-----------------------
+Verbose                         [                 off ] [                 off ]
+Log                             [                  on ] [                  on ]
+Developer mode                  [                   0 ] [                   0 ]
+Estimate times                  [                 off ] [                 off ]
+Statistics chart                [                 off ] [                 off ]
+CPU thread count                [                   2 ] [              Varies ]
+CPU process priority            [              Normal ] [              Normal ]
+Texture data memory limit       [            67108864 ] [            67108864 ]
+Lighting data memory limit      [            67108864 ] [            67108864 ]
+
+Fast mode                       [                 off ] [                 off ]
+Full mode                       [                 off ] [                 off ]
+
+
+BasePortalVis:
+ (0.59 seconds)
+LeafThread:
+ (87.58 seconds)
+average leafs visible: 147
+g_visdatasize:106988  compressed from 98124
+88.45 seconds elapsed [1m 28s]
+
+-----   END   hlvis -----
+
+
+
+hlrad v4.3-VLV34-SC5.25 64-bit (Jan  1 2022)
+Zoner's Half-Life Compilation Tools -- Custom build for Sven Co-op 5.25
+Based on code modifications by Vluzacn (VLV34)
+Based on code modifications by Sean "Zoner" Cavanaugh (4.3)
+Based on Valve's version, modified with permission.
+
+A full list of contributors can be found at http://zhlt.info/credits.html
+
+For help and support please use the official discord channel: https://discord.gg/yZxs6nJs3n
+-----  BEGIN  hlrad -----
+Command line: "C:/Program Files (x86)/Steam/steamapps/common/Sven Co-op SDK/mapping/compilers/SC-RAD_x64.exe" "C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a" 
+Arguments: "C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a" 
+
+-= Current hlrad Settings =-
+Setting                        |  Map value            |  Default value        
+-------------------------------|-----------------------|-----------------------
+Verbose                         [                 off ] [                 off ]
+Log                             [                  on ] [                  on ]
+Developer mode                  [                   0 ] [                   0 ]
+Estimate times                  [                 off ] [                 off ]
+Statistics chart                [                 off ] [                 off ]
+CPU thread count                [                   2 ] [              Varies ]
+CPU process priority            [              Normal ] [              Normal ]
+Texture data memory limit       [            67108864 ] [            67108864 ]
+Lighting data memory limit      [            67108864 ] [            67108864 ]
+
+Fast mode                       [                 off ] [                 off ]
+Extra mode                      [                 off ] [                 off ]
+Visibility matrix               [              Sparse ] [              Sparse ]
+Bounces                         [                   8 ] [                   8 ]
+Ambient world light (R G B)     [   0.000 0.000 0.000 ] [   0.000 0.000 0.000 ]
+Light clipping threshold        [             188.000 ] [             188.000 ]
+Circus mode?                    [                 off ] [                 off ]
+Disable sunlight spread angles? [                 off ] [                 off ]
+Disable opaque light flags?     [                 off ] [                 off ]
+Smoothing t.hold for blending   [              50.000 ] [              50.000 ]
+Smoothing t.hold diff textures  [                 N/A ] [                 N/A ]
+Patch size for normal textures  [              64.000 ] [              64.000 ]
+Patch size for t-light faces    [              32.000 ] [              32.000 ]
+Scale patches with texture?     [                  on ] [                  on ]
+Patch subdividing?              [                  on ] [                  on ]
+Lighting threshold before black [               0.010 ] [               0.010 ]
+Direct lighting threshold       [              10.000 ] [              10.000 ]
+Direct lighting scale           [               1.000 ] [               1.000 ]
+Disable interpolation?          [                 off ] [                 off ]
+Global fade                     [               1.000 ] [               1.000 ]
+Global gap distance for t-light [               0.000 ] [               0.000 ]
+Global light scale (R G B)      [   2.000 2.000 2.000 ] [   2.000 2.000 2.000 ]
+Global gamma (R G B)            [   0.550 0.550 0.550 ] [   0.550 0.550 0.550 ]
+Ambient sunlight shade contrib. [               1.000 ] [               1.000 ]
+Disable sky light being global? [                 off ] [                 off ]
+Use incremental transfer list?  [                 off ] [                 off ]
+Dump light patches?             [                 off ] [                 off ]
+Colour jitter (R G B)           [         0.0 0.0 0.0 ] [         0.0 0.0 0.0 ]
+Monochromatic jitter (R G B)    [         0.0 0.0 0.0 ] [         0.0 0.0 0.0 ]
+Custom shadows with bounces?    [                 off ] [                 off ]
+Enable RBG transfers?           [                 off ] [                 off ]
+Minimum final light             [                   0 ] [                   0 ]
+Compress transfers?             [               16bit ] [               16bit ]
+Compress RGB transfers?         [               32bit ] [               32bit ]
+Smooth skylight?                [                  on ] [                  on ]
+Thickness of translucent faces  [               2.000 ] [               2.000 ]
+Remove black around opaques?    [                  on ] [                  on ]
+Don't load textures?            [                 off ] [                 off ]
+Reflection gamma                [               1.760 ] [               1.760 ]
+Reflection scale                [               0.700 ] [               0.700 ]
+Blur size                       [               1.500 ] [               1.500 ]
+Don't fix pointy t-lights?      [                 off ] [                 off ]
+Don't fix wall bleeding?        [                 off ] [                 off ]
+
+
+Load Textures:
+Using Wadfile: C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op\svencoop_addon\maps\urbicide_c00a.wa_
+229 textures referenced
+Reading texlights from 'C:\Program Files (x86)\Steam\steamapps\common\Sven Co-op SDK\mapping\compilers\lights.rad'
+0 opaque models
+0 opaque faces
+15975 faces
+Create Patches : 43494 base patches
+462209 square feet [66558196.00 square inches]
+1096 direct lights and 0 fast direct lights
+4 light styles
+
+FindFacePositions:
+ (9.97 seconds)
+BuildFacelights:
+ (94.69 seconds)
+BuildVisLeafs:
+ (194.30 seconds)
+visibility matrix   : 139.8 megs
+MakeScales:
+ (245.60 seconds)
+Transfer Lists :    89634543 :    89.63M transfers
+       Indices :    99196112 :    94.60M bytes
+          Data :   179397078 :   171.09M bytes
+Bounce 1 GatherLight:
+ (6.14 seconds)
+Bounce 2 GatherLight:
+ (7.72 seconds)
+Bounce 3 GatherLight:
+ (9.52 seconds)
+Bounce 4 GatherLight:
+ (5.66 seconds)
+Bounce 5 GatherLight:
+ (4.35 seconds)
+Bounce 6 GatherLight:
+ (4.34 seconds)
+Bounce 7 GatherLight:
+ (5.89 seconds)
+Bounce 8 GatherLight:
+ (6.22 seconds)
+CreateTriangulations:
+ (0.86 seconds)
+AddPatchLights:
+ (25.30 seconds)
+FinalLightFace:
+ (1.55 seconds)
+638.84 seconds elapsed [10m 38s]
+
+-----   END   hlrad -----
+
+
+

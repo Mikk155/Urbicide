@@ -2,7 +2,7 @@ CUtils g_Util;
 
 final class CUtils
 {
-    bool Debugs = true;
+    bool Debugs = false;
 
     void Trigger( string iszTarget, CBaseEntity@&in pActivator = null, CBaseEntity@&in pCaller = null, USE_TYPE& in useType = USE_TOGGLE, float&in flDelay = 0.0f )
     {
@@ -434,6 +434,14 @@ final class CUtils
         pFile.Close();
 
         return g_KeyValues;
+    }
+    
+    void NoDraw( CBaseEntity@ pEntity )
+    {
+        if( !Debugs )
+        {
+            pEntity.pev.effects |= EF_NODRAW;
+        }
     }
 }
 

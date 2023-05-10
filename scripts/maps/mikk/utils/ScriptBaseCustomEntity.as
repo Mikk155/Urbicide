@@ -5,6 +5,7 @@ mixin class ScriptBaseCustomEntity
     private Vector minhullsize();
     private Vector maxhullsize();
     private string m_iszMaster();
+    private string m_iszFilterTargetname;
 
     bool ExtraKeyValues( const string& in szKey, const string& in szValue )
     {
@@ -19,6 +20,10 @@ mixin class ScriptBaseCustomEntity
         else if ( szKey == "master" )
         {
             this.m_iszMaster = szValue;
+        }
+        else if ( szKey == "m_iszFilterTargetname" )
+        {
+            m_iszFilterTargetname = szValue;
         }
         else if( szKey == "minhullsize" ) 
         {
@@ -35,9 +40,17 @@ mixin class ScriptBaseCustomEntity
         return true;
     }
 
+    bool IsNameFiltered( CBaseEntity@ pActivator )
+    {
+        if( !m_iszFilterTargetname.IsEmpty() && string( pActivator.pev.targetname ) == m_iszFilterTargetname )
+        {
+            return false;
+        }
+        return false;
+    }
+
     USE_TYPE GetUseType( USE_TYPE & in UseType = USE_TOGGLE )
     {
-        USE_TYPE NewUseType;
         if( m_iUseType == 0 ) { return USE_OFF; }
         else if( m_iUseType == 1 ) { return USE_ON; }
         else if( m_iUseType == 2 ) { return USE_KILL; }
