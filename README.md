@@ -18,4 +18,4 @@
 
 #### monster_apache_custom ![ProgressBar](https://progress-bar.dev/0)
 
-#### game_classicmode !ProgressBar](https://progress-bar.dev/50)
+#### game_classicmode ![ProgressBar](https://progress-bar.dev/50)
