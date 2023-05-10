@@ -1,3 +1,6 @@
+// https://github.com/Outerbeast/Entities-and-Gamemodes/blob/master/respawndead_keepweapons.as
+#include "../beast/respawndead_keepweapons"
+
 #include 'utils/CUtils'
 #include 'utils/CGetInformation'
 #include 'utils/Reflection'
@@ -5,11 +8,17 @@
 
 namespace trigger_autosave_custom
 {
+    CScheduledFunction@ fnRemoveHook = g_Scheduler.SetTimeout( "vRemoveHook", 1.0f );
+
+    void vRemoveHook()
+    {
+        g_Hooks.RemoveHook( Hooks::Player::PlayerKilled, RESPAWNDEAD_KEEPWEAPONS::PlayerKilled );
+    }
+
     void Register()
     {
-        g_Hooks.RegisterHook( Hooks::Player::ClientPutInServer, @trigger_autosave_custom::ClientPutInServer );
-        g_Hooks.RegisterHook( Hooks::Player::PlayerSpawn, @trigger_autosave_custom::PlayerSpawn );
-        g_Hooks.RegisterHook( Hooks::Player::PlayerKilled, @trigger_autosave_custom::PlayerKilled );
+        g_Hooks.RegisterHook( Hooks::Player::ClientPutInServer, @trigger_autosave_custom::playerconnect );
+        g_Hooks.RegisterHook( Hooks::Player::PlayerKilled, @trigger_autosave_custom::playerdie );
         g_CustomEntityFuncs.RegisterCustomEntity( "trigger_autosave_custom::trigger_autosave_custom", "trigger_autosave_custom" );
 
         g_ScriptInfo.SetInformation
@@ -23,61 +32,51 @@ namespace trigger_autosave_custom
         );
     }
 
-    HookReturnCode ClientPutInServer( CBasePlayer@ pPlayer )
+    dictionary g_PlayersID;
+
+    string GetSteamID( CBasePlayer@ pPlayer )
+    {
+        return string( g_EngineFuncs.GetPlayerAuthId( pPlayer.edict() ) );
+    }
+
+    HookReturnCode playerconnect( CBasePlayer@ pPlayer )
     {
         if( pPlayer !is null )
         {
-            for( uint i = 0; i < g_AutoSave.PlayersStatus.length(); i++ )
+            if( g_PlayersID.exists( GetSteamID( pPlayer ) ) )
             {
-                if( string( g_AutoSave.PlayersStatus[i][ 'player' ] ) == g_AutoSave.GetSteamID( pPlayer ) )
-                {
-                    return HOOK_CONTINUE;
-                }
+                return HOOK_CONTINUE;
             }
-            dictionary g_PlayerStatus;
-            g_PlayerStatus[ 'player' ] = g_AutoSave.GetSteamID( pPlayer );
 
-            g_AutoSave.PlayersStatus.insertLast( g_PlayerStatus );
-            
-            if( g_SurvivalMode.IsEnabled() )
-            {
-                g_Scheduler.SetTimeout( "SpawnPlayer", 1.0f, @pPlayer );
-            }
-        }
-        return HOOK_CONTINUE;
-    }
-    
-    void SpawnPlayer( CBasePlayer@ pPlayer )
-    {
-        g_PlayerFuncs.RespawnPlayer( pPlayer, false, true );
-    }
-
-    HookReturnCode PlayerKilled( CBasePlayer@ pPlayer, CBaseEntity@ pAttacker, int iGib )
-    {
-        if( pPlayer !is null )
-        {
-            if( g_SurvivalMode.IsEnabled() && g_AutoSave.GetSave( pPlayer ) > 0 )
-            {
-                g_Util.SetCKV( pPlayer, '$i_tas_zone', g_AutoSave.GetSave( pPlayer ) - 1 );
-                g_Scheduler.SetTimeout( "SpawnPlayer", 1.0f, @pPlayer );
-            }
+            g_PlayersID[ GetSteamID( pPlayer ) ] = '1';
         }
         return HOOK_CONTINUE;
     }
 
-    HookReturnCode PlayerSpawn( CBasePlayer@ pPlayer )
+    void SetSaves( CBasePlayer@ pPlayer, int&in iMode = 0 )
+    {
+        int iValue = atoi( string( g_PlayersID[ GetSteamID( pPlayer ) ] ) );
+
+        if( iMode == 1 )
+        {
+            iValue = iValue + 1;
+        }
+        else if( iMode == -1 && g_SurvivalMode.IsEnabled() && g_SurvivalMode.IsActive() )
+        {
+            iValue = iValue - 1;
+        }
+        g_PlayersID[ GetSteamID( pPlayer ) ] = string( iValue );
+    }
+
+    HookReturnCode playerdie( CBasePlayer@ pPlayer, CBaseEntity@ pAttacker, int iGib )
     {
         if( pPlayer !is null )
         {
-            for( uint i = 0; i < g_AutoSave.PlayersStatus.length(); i++ )
+            int iValue = atoi( string( g_PlayersID[ GetSteamID( pPlayer ) ] ) );
+
+            if( iValue > 0 )
             {
-                if( string( g_AutoSave.PlayersStatus[i][ 'player' ] ) == g_AutoSave.GetSteamID( pPlayer ) )
-                {
-                    if( g_AutoSave.GetSave( pPlayer ) >= 0 )
-                    {
-                        g_AutoSave.LoadStatus( pPlayer, g_AutoSave.PlayersStatus[i] );
-                    }
-                }
+                g_Scheduler.SetTimeout( "LoadStatus", 1.0f, @pPlayer );
             }
         }
         return HOOK_CONTINUE;
@@ -89,6 +88,7 @@ namespace trigger_autosave_custom
         {
             Save( pOther );
         }
+
         void Use( CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float fldelay )
         {
             Save( pActivator );
@@ -106,7 +106,7 @@ namespace trigger_autosave_custom
         {
             for( uint i = 0; i < m_iszSteamIDs.length(); i++ )
             {
-                if( m_iszSteamIDs[i] == g_AutoSave.GetSteamID( pPlayer ) )
+                if( m_iszSteamIDs[i] == GetSteamID( pPlayer ) )
                 {
                     return true;
                 }
@@ -120,19 +120,16 @@ namespace trigger_autosave_custom
 
             if( pPlayer !is null && !HasBeenSaved( pPlayer ) )
             {
-                // For survival mode
-                g_Util.SetCKV( pPlayer, '$i_tas_zone', g_AutoSave.GetSave( pPlayer ) + 1 );
-
-                m_iszSteamIDs.insertLast( g_AutoSave.GetSteamID( pPlayer ) );
-                g_AutoSave.SaveStatus( pPlayer );
-                g_Util.Trigger( pPlayer, self, USE_TOGGLE, 0.0f );
+                m_iszSteamIDs.insertLast( GetSteamID( pPlayer ) );
+                SaveStatus( pPlayer );
+                g_Util.Trigger( string( self.pev.target ), pPlayer, self, USE_TOGGLE, 0.0f );
             }
         }
 
         void Spawn()
         {
             self.pev.solid = SOLID_TRIGGER;
-            // self.pev.effects |= EF_NODRAW;
+            g_Util.NoDraw( self );
             self.pev.movetype = MOVETYPE_NONE;
 
             SetBoundaries();
@@ -140,43 +137,32 @@ namespace trigger_autosave_custom
             BaseClass.Spawn();
         }
     }
-}
-
-CAutoSave g_AutoSave;
-
-final class CAutoSave
-{
-    array<dictionary> PlayersStatus;
-
-    string GetSteamID( CBasePlayer@ pPlayer )
-    {
-        return string( g_EngineFuncs.GetPlayerAuthId( pPlayer.edict() ) );
-    }
-
-    int GetSave( CBasePlayer@ pPlayer )
-    {
-        return atoi( g_Util.GetCKV( pPlayer, '$i_tas_zone' ) );
-    }
 
     void SaveStatus( CBasePlayer@ pPlayer )
     {
-        for( uint i = 0; i < g_AutoSave.PlayersStatus.length(); i++ )
-        {
-            if( string( g_AutoSave.PlayersStatus[i][ 'player' ] ) == g_AutoSave.GetSteamID( pPlayer ) )
-            {
-                g_AutoSave.PlayersStatus[i][ 'origin' ] = pPlayer.pev.origin.ToString();
-                g_AutoSave.PlayersStatus[i][ 'angles' ] = pPlayer.pev.angles.ToString();
-                g_AutoSave.PlayersStatus[i][ 'health' ] = string( pPlayer.pev.health );
-                g_AutoSave.PlayersStatus[i][ 'armorvalue' ] = string( pPlayer.pev.armorvalue );
-            }
-        }
+        SetSaves( pPlayer, 1 );
+
+        g_Util.SetCKV( pPlayer, '$s_tas_origin', pPlayer.pev.origin.ToString() );
+        g_Util.SetCKV( pPlayer, '$s_tas_angles', pPlayer.pev.angles.ToString() );
+        g_Util.SetCKV( pPlayer, '$s_tas_health', string( pPlayer.pev.health ) );
+        g_Util.SetCKV( pPlayer, '$s_tas_armorvalue', string( pPlayer.pev.armorvalue ) );
+        RESPAWNDEAD_KEEPWEAPONS::DICT_PLAYER_LOADOUT[pPlayer.entindex()] = RESPAWNDEAD_KEEPWEAPONS::GetPlayerLoadout( pPlayer );
     }
 
-    void LoadStatus( CBasePlayer@ pPlayer, dictionary g_Values )
+    void LoadStatus( CBasePlayer@ pPlayer )
     {
-        pPlayer.pev.origin = g_Util.StringToVec( string( g_Values[ 'origin' ] ) );
-        pPlayer.pev.angles = g_Util.StringToVec( string( g_Values[ 'angles' ] ) );
-        pPlayer.pev.health = atoi( string( g_Values[ 'health' ] ) );
-        pPlayer.pev.armorvalue = atoi( string( g_Values[ 'armorvalue' ] ) );
+        int iValue = atoi( string( g_PlayersID[ GetSteamID( pPlayer ) ] ) );
+
+        if( iValue > 1 )
+        {
+            g_PlayerFuncs.RespawnPlayer( pPlayer, false, true );
+            SetSaves( pPlayer, -1 );
+            pPlayer.pev.origin = g_Util.StringToVec( g_Util.GetCKV( pPlayer, '$s_tas_origin' ) );
+            pPlayer.pev.angles = g_Util.StringToVec( g_Util.GetCKV( pPlayer, '$s_tas_angles' ) );
+            pPlayer.pev.health = atof( g_Util.GetCKV( pPlayer, '$s_tas_health' ) );
+            pPlayer.pev.armorvalue = atof( g_Util.GetCKV( pPlayer, '$s_tas_armorvalue' ) );
+            RESPAWNDEAD_KEEPWEAPONS::ReEquipCollected( @pPlayer, true );
+            RESPAWNDEAD_KEEPWEAPONS::DICT_PLAYER_LOADOUT[pPlayer.entindex()] = RESPAWNDEAD_KEEPWEAPONS::GetPlayerLoadout( pPlayer );
+        }
     }
 }
